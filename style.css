@@ -2,9 +2,11 @@
 
 :root {
     --cor1: #e03131;
-    --cor1d: #160505;
+    --black: #160505;
     --cor1l: #f6c1c1;
-
+    --amarelo: #fcc419;
+    --amarelol: #ffe066;
+    --blackl: #343a40;
     --fontp: 'Amaranth','Helvetica', 'sans-serif';
 }
 
@@ -29,11 +31,11 @@ body {
 
 
 /* Gerais */
-
 section {
     background-repeat: no-repeat;
     background-size: cover;
     margin-bottom: 3.2rem;
+    padding: 3.2rem;
 }
 
 .parallax {
@@ -45,6 +47,93 @@ section {
     color: #2d0a0a;
     letter-spacing: 0.4rem;
 }
+
+
+a[rel="external"]::after {
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    font-family: 'Font Awesome 6 Free';
+    content: "     \f08e";
+}
+
+
+/*Estilização dos Cards*/
+
+.card--receitas {
+    width: 30rem;
+    min-height: 40rem;
+    border-radius: 0.9rem;
+    border: 1px solid var(--cor1l);
+    box-shadow: 2px 2px 15px #999;
+
+}
+
+.card--receitas--wrapper {
+    padding: 0.6rem 1.2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 2.4rem;
+    column-gap: 1.2rem;
+    place-items: center;
+
+
+}
+
+.wr {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.card--receitas img {
+    border-radius: 0.9rem 0.9rem 0rem 0rem;
+    width: 100%;
+    height: 20rem;
+    object-fit: cover;
+    border-bottom: 2px solid #ced4da;
+}
+
+.card--receitas i {
+    font-size: 2.4rem;
+    color: var(--cor1);
+}
+
+.titulo--receita{
+    color: var(--cor1);
+    grid-column: 1 / -1;
+}
+
+.card--receitas--texto {
+    color: var(--blackl);
+    font-size: 1.8rem;
+}
+
+.avaliacao {
+    grid-column:  1 /-1;
+    display: flex;
+    justify-content: space-evenly;
+    width: 50%;
+
+}
+
+.avaliacao i {
+    color: var(--amarelo);
+}
+
+.card--receitas a {
+    grid-column:  1 /-1;
+    font-weight: 700;
+    color: var(--cor1d);
+    text-decoration: none;
+}
+
+.card--receitas a:hover,
+.card--receitas a:focus {
+    transition: all 0.4s ease-in-out;
+    color: var(--cor1);
+    text-decoration: none;
+}
+
 
 
 /* Estilização do Header */
@@ -171,4 +260,12 @@ header {
     color: #eee;
     width: fit-content;
     border-radius: 0.9rem;
+}
+
+/* Estilização da Section Churrasco */
+
+.container--receitas {  
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 30rem);
+    gap: 3.2rem;
 }
