@@ -7,7 +7,7 @@
     --amarelo: #fcc419;
     --amarelol: #ffe066;
     --blackl: #343a40;
-    --fontp: 'Amaranth','Helvetica', 'sans-serif';
+    --fontp: 'Amaranth','Helvetica', 'sans-serif';    
 }
 
 * {
@@ -56,10 +56,23 @@ a[rel="external"]::after {
     content: "     \f08e";
 }
 
+.grad--texto {
+    background: -webkit-linear-gradient(to right, #fdbb2d, #b21f1f, #1a2a6c);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #fdbb2d, #b21f1f, #1a2a6c); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+
 
 /*Estilização dos Cards*/
 
 .card--receitas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
     width: 30rem;
     min-height: 40rem;
     border-radius: 0.9rem;
@@ -69,12 +82,14 @@ a[rel="external"]::after {
 }
 
 .card--receitas--wrapper {
+    flex: 1 0;
     padding: 0.6rem 1.2rem;
     display: grid;
     grid-template-columns: 1fr 1fr;
     row-gap: 2.4rem;
     column-gap: 1.2rem;
     place-items: center;
+    position: relative;
 
 
 }
@@ -121,7 +136,7 @@ a[rel="external"]::after {
 }
 
 .card--receitas a {
-    grid-column:  1 /-1;
+    justify-self: flex-end;
     font-weight: 700;
     color: var(--cor1d);
     text-decoration: none;
@@ -266,6 +281,7 @@ header {
 
 .container--receitas {  
     display: grid;
+    justify-content: center;
     grid-template-columns: repeat(auto-fill, 30rem);
     gap: 3.2rem;
 }
