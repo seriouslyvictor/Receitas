@@ -46,6 +46,9 @@ section {
     font-size: 5.8rem;
     color: #2d0a0a;
     letter-spacing: 0.4rem;
+    text-align: center;
+    margin: auto;
+    width: fit-content;
 }
 
 
@@ -142,8 +145,10 @@ a[rel="external"]::after {
     text-decoration: none;
 }
 
-.card--receitas a:hover,
-.card--receitas a:focus {
+a:hover,
+a:focus,
+.icone--receitas:hover,
+.icone--receitas:focus {
     transition: all 0.4s ease-in-out;
     color: var(--cor1);
     text-decoration: none;
@@ -280,8 +285,48 @@ header {
 /* Estilização da Section Churrasco */
 
 .container--receitas {  
+    position: relative;
     display: grid;
     justify-content: center;
     grid-template-columns: repeat(auto-fill, 30rem);
     gap: 3.2rem;
+    padding: 1.4rem 0rem;
+    border: 2px solid var(--blackl);
+    border-radius: 0rem 1.4rem 1.4rem 1.4rem;
+    width: 80%;
+    margin: auto;
+}
+
+.nav--receitas {
+    background-color: #eee;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    gap: 3.2rem;
+    border: 2px solid var(--blackl);
+    border-radius: 1.4rem 0rem 0rem 1.4rem;
+    position: absolute;
+    top: -2px;
+    left: -52px;
+    z-index: 0;
+}
+
+.icone--receitas {
+    padding: 0.4rem;
+}
+
+.icone--receitas:first-child {
+    border-radius: 1.4rem 0rem 0rem 0rem;
+}
+
+.icone--receitas:last-child {
+    border-radius: 0rem 0rem 0rem 1.4rem;
+}
+
+.selected {
+    color: var(--cor1);
+    box-shadow: 0px 0px 20px var(--blackl);
+    border-bottom: 2px solid var(--blackl);
+    border-top: 2px solid var(--blackl);
 }
