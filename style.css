@@ -21,6 +21,7 @@ html {
     font-size: 62.5%;
 }
 
+
 body {
     font-family: var(--fontp);
     font-size: 1.6rem;
@@ -34,7 +35,7 @@ body {
 section {
     background-repeat: no-repeat;
     background-size: cover;
-    margin-bottom: 3.2rem;
+    /* margin-bottom: 3.2rem; */
     padding: 3.2rem;
 }
 
@@ -80,7 +81,8 @@ a[rel="external"]::after {
     min-height: 40rem;
     border-radius: 0.9rem;
     border: 1px solid var(--cor1l);
-    box-shadow: 2px 2px 15px #999;
+    box-shadow: 2px 2px 15px #414141;
+    background-color: #eee;
 
 }
 
@@ -165,6 +167,7 @@ header {
     padding: 1.2rem;
     height: 12rem;
     font-size: 2.4rem;
+    box-shadow: 10px 0px 10px black;
 }
 
 .logo--header {
@@ -285,6 +288,8 @@ header {
 /* Estilização da Section Churrasco */
 
 .container--receitas {  
+    background: url(backgrounds/wooden-sign-transp.jpg) no-repeat center;
+    background-size: cover;
     position: relative;
     display: grid;
     justify-content: center;
@@ -314,6 +319,8 @@ header {
 
 .icone--receitas {
     padding: 0.4rem;
+    width: 100%;
+    text-align: center;
 }
 
 .icone--receitas:first-child {
@@ -326,7 +333,6 @@ header {
 
 .selected {
     color: var(--cor1);
-    box-shadow: 0px 0px 20px var(--blackl);
-    border-bottom: 2px solid var(--blackl);
-    border-top: 2px solid var(--blackl);
+    box-shadow: 0px 0px 15px var(--blackl);
+    background-color: #FFD;
 }

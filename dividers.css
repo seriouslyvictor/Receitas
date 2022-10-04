@@ -1,0 +1,26 @@
+
+.divisor--curvado{
+    overflow:hidden;
+    position:relative;
+    }
+    .divisor--curvado::before{ 
+    content:'';
+    font-family:'shape divider from ShapeDividers.com';
+    position: absolute;
+    z-index: 3;
+    pointer-events: none;
+    background-repeat: no-repeat;
+    bottom: -0.1vw;
+    left: -0.1vw;
+    right: -0.1vw;
+    top: -0.1vw; 
+    background-size: 100% 123px;
+    background-position: 50% 0%;  background-image: url('data:image/svg+xml;charset=utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35.278 3.62" preserveAspectRatio="none"><path d="M35.278.092S8.238.267 0 3.62V.092z" opacity=".2" fill="%23e03131"/><path d="M35.278.092S8.238.246 0 3.194V.092z" opacity=".2" fill="%23e03131"/><path d="M35.278.092S8.238.223 0 2.738V.092zM35.278.092H0V0h35.278z" fill="%23e03131"/></svg>'); 
+    }
+    
+    @media (min-width:2100px){
+    .divisor--curvado::before{
+    background-size: 100% calc(2vw + 123px);
+    }
+    }
+     
